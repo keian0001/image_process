@@ -1,7 +1,7 @@
 {
   "indexes": [
     {
-      "collectionGroup": "Image",
+      "collectionGroup": "images",
       "queryScope": "COLLECTION",
       "fields": [
         {
