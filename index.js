@@ -15,6 +15,9 @@ const vision = require('@google-cloud/vision');
 const storage = require('@google-cloud/storage');
 
 admin.initializeApp();
+exports.helloWorld = onRequest((request, response) => {
+ logger.info("Hello logs!", {structuredData: true});
+  response.send("Hello from Firebase!");
 
 // Predefined categories and tags
 const categories = {
@@ -116,7 +119,3 @@ exports.processImageUpload = functions.storage.object().onFinalize(async (object
 // Create and deploy your first functions
 // https://firebase.google.com/docs/functions/get-started
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
