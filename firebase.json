@@ -14,7 +14,7 @@
         "firebase-debug.*.log",
         "*.local"
       ],
-      "predeploy": [
+      "predeploy": ["npm run lint"
       ]
     }
   ],
