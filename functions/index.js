@@ -13,6 +13,13 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const vision = require('@google-cloud/vision');
 const storage = require('@google-cloud/storage');
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 8080; // Use the PORT variable
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
  exports.helloWorld = onRequest((request, response) => {
  logger.info("Hello logs!", {structuredData: true});
   response.send("Hello from Firebase!");
